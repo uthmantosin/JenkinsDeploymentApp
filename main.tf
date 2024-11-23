@@ -5,6 +5,17 @@ provider "aws" {
 }
 
 
+
+
+terraform {
+   backend "s3" {
+  bucket = "menwithtaste-jenkins"
+  profile   = "MENWITHTASTE"
+  key    = "terraform.tfstate"
+  region = "us-east-1"
+   }
+} 
+
 # Create a VPC
 
 resource "aws_vpc" "prodvpc" {
