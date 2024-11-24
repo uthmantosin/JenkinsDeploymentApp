@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd SampleWebApp && mvn clean package'
+                sh 'cd MwtApp && mvn clean package'
             }
         }
         stage('Test') {
             steps {
-                sh 'cd SampleWebApp && mvn test'
+                sh 'cd MwtApp && mvn test'
             }
         }        
         
